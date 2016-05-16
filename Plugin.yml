@@ -1,0 +1,9 @@
+name: Wild
+author: Kenn
+main: Kenn\Wild\Main
+api: [1.14.0, 2.0.0]
+version: 0.0.1
+commands:
+ wild:
+  usage: /wild 
+  description: Go Wilderness
