@@ -8,17 +8,23 @@ use pocketmine\{Server,Player};
 use pocketmine\utils\TextFormat as C;
 
 class Main extends PluginBase {
-    
+  
+    public function onLoad(){
+              $this->getLogger()->info("Loading Plugin");
+    }
     public function onEnable(){
-               $this->getLogger()->info(C::RED."Enabled Plugin");
-    }  
+              $this->getLogger()->info("Enabled Plugin");
+    }
+    public function onDisable(){
+              $this->getLogger()->info("Disabled Plugin");
+    }
     public function onCommand(CommandSender $s, Command $cmd, $label, array $args){
-        if(strtolower($cmd->getName() == "wild")){
+    if(strtolower($cmd->getName() == "wild")){
             $x = rand(1,999);
             $y = rand(1,128);
             $z = rand(1,999);
             $s->teleport(new Position($x,$y,$z));
-            $s->sendMessage(C::GREEN."Teleporting to Random Place!");
+            $s->sendMessage(C::RED."Teleporting to Random Place!");
         }
         return true;
     }
