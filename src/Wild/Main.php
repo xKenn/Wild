@@ -1,7 +1,5 @@
 <?php
-
 namespace Kenn\Wild;
-
 use pocketmine\plugin\PluginBase;
 use pocketmine\command\{Command,CommandSender};
 use pocketmine\level\{Level,Position};
