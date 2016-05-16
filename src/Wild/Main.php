@@ -8,6 +8,7 @@ use pocketmine\{Server,Player};
 use pocketmine\utils\TextFormat as C;
 
 class Main extends PluginBase {
+    
     public function onEnable(){
                     $this->getLogger()->info(C::RED."Enabled Plugin");
     }
