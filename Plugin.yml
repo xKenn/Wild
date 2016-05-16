@@ -6,4 +6,4 @@ version: 0.0.1
 commands:
  wild:
   usage: /wild 
-  description: Go Wilderness
+  description: Go Wilderness!
