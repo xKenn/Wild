@@ -11,14 +11,9 @@ use pocketmine\utils\TextFormat as C;
 
 class Main extends PluginBase {
     
-          public function onLoad(){
-                    $this->getLogger()->info("Plugin Loading");
-          }
           public function onEnable(){
-                    $this->getLogger()->info("Enabled Plugin");
-          }
-          public function onDisable(){
-                    $this->getLogger()->info("Plugin Disabled");
+                    $this->getLogger()->info(C::RED."Enabled Plugin");
+    }
     
     public function onCommand(CommandSender $s, Command $cmd, $label, array $args){
         if(strtolower($cmd->getName() == "wild")){
