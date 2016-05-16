@@ -1,6 +1,6 @@
-name: Wild/Main
+name: Wild
 author: Kenn
-main: Kenn\Wild\Main
+main: Wild\Main
 api: [1.14.0, 2.0.0]
 version: 0.0.1
 
