@@ -10,9 +10,8 @@ use pocketmine\utils\TextFormat as C;
 class Main extends PluginBase {
     
     public function onEnable(){
-                    $this->getLogger()->info(C::RED."Enabled Plugin");
-    }
-    
+               $this->getLogger()->info(C::RED."Enabled Plugin");
+    }  
     public function onCommand(CommandSender $s, Command $cmd, $label, array $args){
         if(strtolower($cmd->getName() == "wild")){
             $x = rand(1,999);
