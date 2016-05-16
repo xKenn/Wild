@@ -1,16 +1,24 @@
 <?php
+
 namespace Kenn\Wild;
+
 use pocketmine\plugin\PluginBase;
 use pocketmine\command\{Command,CommandSender};
 use pocketmine\level\{Level,Position};
 use pocketmine\math\Vector3;
 use pocketmine\{Server,Player};
 use pocketmine\utils\TextFormat as C;
+
 class Main extends PluginBase {
     
-    public function onEnable(){
-        $this->getLogger()->info(C::GREEN."Enabled!");
-    }
+          public function onLoad(){
+                    $this->getLogger()->info("Plugin Loading");
+          }
+          public function onEnable(){
+                    $this->getLogger()->info("Enabled Plugin");
+          }
+          public function onDisable(){
+                    $this->getLogger()->info("Plugin Disabled");
     
     public function onCommand(CommandSender $s, Command $cmd, $label, array $args){
         if(strtolower($cmd->getName() == "wild")){
@@ -18,7 +26,7 @@ class Main extends PluginBase {
             $y = rand(1,128);
             $z = rand(1,999);
             $s->teleport(new Position($x,$y,$z));
-            $s->sendMessage(C::RED."Teleporting to Random Place!");
+            $s->sendMessage(C::GREEN."Teleporting to Random Place!");
         }
         return true;
     }
